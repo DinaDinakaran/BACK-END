@@ -72,12 +72,15 @@ const mongomodelflipkart = mongooes.model("flipkart",validationFlipkart)
                 res.status(201).send(data);
             }).catch((error)=>{
                 res.status(400).send(error);
-            })
-        
-    
-                
-           
+            })  
         })
+
+ 
+        app.get("/flipkart",(req,res)=>{
+            res.status(200).send(flipkart)
+        })
+
+
         }else((err)=>{
             console.log(err)
         })
@@ -130,6 +133,12 @@ const mongomodelflipkart = mongooes.model("flipkart",validationFlipkart)
                 
            
         })
+
+        app.get("/snapdeal",(req,res)=>{
+            res.status(200).send(snapdeal)
+        })
+
+
         }else((err)=>{
             console.log(err)
         })
@@ -181,12 +190,15 @@ const mongomodelflipkart = mongooes.model("flipkart",validationFlipkart)
                 res.status(201).send(data);
             }).catch((error)=>{
                 res.status(400).send(error);
-            })
-        
-    
-                
-           
+            }) 
         })
+
+
+
+        app.get("/amazon",(req,res)=>{
+            res.status(200).send(amazon)
+        })
+
         }else((err)=>{
             console.log(err)
         })
