@@ -4,6 +4,7 @@ const mongooes = require("mongoose")
 const express= require("express")
 const request = require("request")
 const cheerio = require("cheerio");
+const cors = require("cors")
 // const validationschema = require("./schema/datavalidschama") 
 
 
@@ -13,6 +14,9 @@ const url3 ="https://www.amazon.in/s?i=electronics&bbn=1388921031&rh=n%3A9764190
 
 const app = express()
 app.use(express.json());
+app.use(cors({
+    origin : "*"
+}))
 
 app.listen(port,()=> console.log(`this server runs at ${port}`))
 mongooes.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@machiii.ks4yx.mongodb.net/?retryWrites=true&w=majority`
