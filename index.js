@@ -66,7 +66,7 @@ const mongomodelflipkart = mongooes.model("flipkart",validationFlipkart)
            const  flipkart = value.slice(0,11)
         //    console.log(flipkart)
           
-           app.post("/flipkart",async (req,res)=>{
+           app.post("/",async (req,res)=>{
            
             mongomodelflipkart.insertMany(flipkart).then((data)=>{
                 res.status(201).send(data);
@@ -121,7 +121,7 @@ const mongomodelflipkart = mongooes.model("flipkart",validationFlipkart)
            const  snapdeal = value.slice(0,11)
         //    console.log(snapdeal)
           
-           app.post("/snapdeal",async (req,res)=>{
+           app.post("/",async (req,res)=>{
            
             mongomodelsnapdeal.insertMany(snapdeal).then((data)=>{
                 res.status(201).send(data);
@@ -184,7 +184,7 @@ const mongomodelflipkart = mongooes.model("flipkart",validationFlipkart)
            const  amazon = value.slice(4,15)
         //    console.log(amazon)
           
-           app.post("/amazon",async (req,res)=>{
+           app.post("/",async (req,res)=>{
            
             mongomodelamazon.insertMany(amazon).then((data)=>{
                 res.status(201).send(data);
